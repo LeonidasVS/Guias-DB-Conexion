@@ -70,6 +70,8 @@
             this.faxTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.idtext = new System.Windows.Forms.TextBox();
+            this.Agregar = new System.Windows.Forms.Button();
+            this.Busqueda = new System.Windows.Forms.ToolStripTextBox();
             companyNameLabel = new System.Windows.Forms.Label();
             contactNameLabel = new System.Windows.Forms.Label();
             contactTitleLabel = new System.Windows.Forms.Label();
@@ -224,7 +226,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.customersBindingNavigatorSaveItem});
+            this.customersBindingNavigatorSaveItem,
+            this.Busqueda});
             this.customersBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.customersBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.customersBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -244,7 +247,6 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -432,11 +434,29 @@
             this.idtext.Size = new System.Drawing.Size(100, 20);
             this.idtext.TabIndex = 25;
             // 
+            // Agregar
+            // 
+            this.Agregar.Location = new System.Drawing.Point(676, 407);
+            this.Agregar.Name = "Agregar";
+            this.Agregar.Size = new System.Drawing.Size(112, 31);
+            this.Agregar.TabIndex = 26;
+            this.Agregar.Text = "Agregar";
+            this.Agregar.UseVisualStyleBackColor = true;
+            this.Agregar.Click += new System.EventHandler(this.Agregar_Click);
+            // 
+            // Busqueda
+            // 
+            this.Busqueda.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Busqueda.Name = "Busqueda";
+            this.Busqueda.Size = new System.Drawing.Size(100, 25);
+            this.Busqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Busqueda_KeyPress);
+            // 
             // ConexionSQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Agregar);
             this.Controls.Add(label1);
             this.Controls.Add(this.idtext);
             this.Controls.Add(this.button1);
@@ -505,5 +525,7 @@
         private System.Windows.Forms.TextBox faxTextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox idtext;
+        private System.Windows.Forms.Button Agregar;
+        private System.Windows.Forms.ToolStripTextBox Busqueda;
     }
 }
